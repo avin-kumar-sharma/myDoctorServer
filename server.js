@@ -1,7 +1,16 @@
 const http = require('http');
 const fs = require('fs');
-const server = http.createServer((req,res)=>{
-    console.log(req.url,req.method);
+const _=require('lodash');
+const server =http.createServer((req,res)=>{
+    //loadash
+    const num=_.random(0,20);
+    console.log(num);
+    
+    const fun =_.once(()=>{
+        console.log('hello');
+    }
+    );
+    fun();
 
     //set header content type
     // res.setHeader('Content-Type','text/html');
